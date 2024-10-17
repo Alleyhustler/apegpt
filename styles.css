@@ -1,0 +1,245 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #111; /* Fallback background */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Hero Section (Chat AI) */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('DALL·E\ 2024-10-17\ 08.56.29\ -\ A\ futuristic\ website\ background\ design\ for\ \'APE\ GPT\'.\ The\ background\ should\ incorporate\ a\ dark\ theme\ with\ tech-inspired\ elements\ like\ digital\ grids\,\ c.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 10000px;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: white;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.chat-box {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 600px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 400px;
+}
+
+.chat-log {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    height: 80%;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.chat-log p {
+    background: #444;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0;
+    color: #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.chat-log p.user-message {
+    background: #00BFFF;
+    color: white;
+}
+
+.chat-log p.bot-message {
+    background: #FFD700;
+    color: black;
+}
+
+.chat-input-box {
+    display: flex;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #FFD700;
+    background: #333;
+    color: white;
+    font-family: inherit;
+}
+
+#send-btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 10px;
+    color: black;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #FF8C00;
+}
+
+/* Section Styling */
+section {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.about-us, .tokenomics, .socials {
+    text-align: center;
+    background-color: #222;
+    padding: 80px 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* About Us */
+.about-us p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tokenomics */
+.tokenomics {
+    background-color: #111;
+}
+
+.token-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.token {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    min-width: 200px;
+}
+
+.token h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.token p, .token ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Socials */
+.socials {
+    background-color: #222;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Ensure background stays fixed during scrolling */
+.hero {
+    background-attachment: fixed;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .token-details {
+        flex-direction: column;
+    }
+
+    .token {
+        width: 80%;
+    }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 8px;
+}
